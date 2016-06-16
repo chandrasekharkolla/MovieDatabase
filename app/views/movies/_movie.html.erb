@@ -1,0 +1,10 @@
+<tr>
+	<td class="text-center"><%= link_to movie.title, movie %></td>
+	<td class="text-center"><%= truncate(strip_tags(movie.description), length: 10) %></td>
+	<td class="text-center">movie.rating</td>
+	<td class="text-center">
+		<%= link_to "Show", movie, class: 'btn btn-primary' %>
+		<%= link_to "Edit", edit_movie_path(movie), class: 'btn btn-primary' %>
+		<%= link_to "Delete", movie, method: :delete, data: { confirm: 'Are you sure?' } ,class: 'btn btn-primary' %>
+	</td>
+</tr>
